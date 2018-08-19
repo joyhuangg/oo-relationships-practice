@@ -1,14 +1,15 @@
 class Ingredient
   @@all = []
-  attr_accessor :dessert, :name
+  attr_accessor :dessert, :name, :calorie_count
 
   def self.all
     @@all
   end
 
-  def initialize(dessert:, name:)
+  def initialize(dessert:, name:, calorie_count:)
     @dessert = dessert
     @name = name
+    @calorie_count = calorie_count
     @@all << self
   end
 
