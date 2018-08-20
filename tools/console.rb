@@ -4,7 +4,7 @@ def reload
   load 'config/environment.rb'
 end
 
-###########AIRBNB########################
+###########  AIRBNB   ########################
 
 vicki = Guest.new(name:"Vicki")
 joy = Guest.new(name:"Joy")
@@ -34,7 +34,7 @@ trip7 = Trip.new(listing:berlin, guest:lisa)
 trip8 = Trip.new(listing:berlin, guest:lisa)
 
 
-##################BAKERY###########################
+##################  BAKERY  ###########################
 
 
 bakery1 = Bakery.new(name:"Joy's baked goodz")
@@ -80,7 +80,7 @@ banana = Ingredient.new(dessert:banana_pie, name:"banana", calorie_count:55)
 chocolate_sprinkles = Ingredient.new(dessert: doughnut, name:"chocolate_sprinkles", calorie_count:50)
 
 
-####################LYFT###############################
+####################   LYFT   ###############################
 
 
 joy = Passenger.new(name:"Joy")
@@ -102,7 +102,7 @@ ride8= Ride.new(passenger:lisa, driver:bob, distance:100.2)
 ride9= Ride.new(passenger:lisa, driver:tiffany, distance:99.9)
 
 
-###################################IMDB########################################
+###################################  IMDB  ########################################
 
 
 ##Create show with same title of movie
@@ -144,5 +144,35 @@ Character.new(actor:anne_hathaway, name:"starwarsactor8", movies:[star_wars1])
 
 #create character that appears many times in films/shows
 
+
+#############################   GYM  ######################################
+
+
+# have los angeles have the least clients
+los_angeles = Location.new(location:"Los Angeles")
+
+st_marks = Location.new(location:"St Marks")
+dumbo = Location.new(location:"Brooklyn-Dumbo")
+queens = Location.new(location:"Queens")
+
+#have Joy have the most clients
+joy = Trainer.new(name:"Joy", salary:5000, locations:[los_angeles, st_marks, dumbo, queens])
+haley = Trainer.new(name:"Haley", salary:500, locations:[st_marks, dumbo, queens])
+vadim = Trainer.new(name:"Vadim", locations:[dumbo, queens])
+
+#assign Vicki to Joy
+vicki = Client.new(name: "Vicki")
+vicki.assign_trainer(joy)
+sara = Client.new(name: "Sara", trainer:joy)
+malcome = Client.new(name: "Malcome", trainer:joy)
+eben = Client.new(name: "Eben", trainer:joy)
+danny = Client.new(name: "Danny", trainer:joy)
+maddie = Client.new(name: "Maddie", trainer:joy)
+gina = Client.new(name: "Gina", trainer:joy)
+sherzod = Client.new(name: "Sherzod", trainer:joy)
+hugo = Client.new(name: "Hugo", trainer:joy)
+linh = Client.new(name: "Linh", trainer:vadim)
+zora = Client.new(name: "Zora", trainer:vadim)
+chris = Client.new(name: "Chris", trainer:vadim)
 
 Pry.start
