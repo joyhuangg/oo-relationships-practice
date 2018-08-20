@@ -175,4 +175,32 @@ linh = Client.new(name: "Linh", trainer:vadim)
 zora = Client.new(name: "Zora", trainer:vadim)
 chris = Client.new(name: "Chris", trainer:vadim)
 
+
+############### Crowd Funding ###################################
+
+#highest pledger
+joy = User.new(name:"Joy")
+#multipledgers : joy and vicki
+vicki = User.new(name:"Vicki")
+#project creators : Vicki and Lisa
+lisa = User.new(name:"Lisa")
+
+
+#this one has the most backers
+homeless = Project.new(user:vicki, name:"Homes for the Homeless", pledge_goal_amount:50000)
+#this one exceeds its pledge goal amount
+sockless = Project.new(user:vicki, name:"Socks for the Sockless", pledge_goal_amount:1000)
+#no one pledges for this project
+tacoless = Project.new(user:lisa, name:"Tacos for the Tacoless", pledge_goal_amount:500, description:"We give tacos to people who like tacos")
+
+Pledge.new(user:joy, project:sockless, amount:900)
+Pledge.new(user:joy, project:homeless, amount:100)
+Pledge.new(user:joy, project:sockless, amount:100)
+Pledge.new(user:lisa, project:homeless, amount:300)
+Pledge.new(user:vicki, project:homeless, amount:100)
+Pledge.new(user:vicki, project:homeless, amount:500)
+Pledge.new(user:vicki, project:sockless, amount:500)
+
+
+
 Pry.start
