@@ -4,6 +4,8 @@ def reload
   load 'config/environment.rb'
 end
 
+###########AIRBNB########################
+
 vicki = Guest.new(name:"Vicki")
 joy = Guest.new(name:"Joy")
 lisa = Guest.new(name:"Lisa")
@@ -30,6 +32,10 @@ trip5 = Trip.new(listing:seattle3, guest:joy)
 trip6 = Trip.new(listing:berlin, guest:joy)
 trip7 = Trip.new(listing:berlin, guest:lisa)
 trip8 = Trip.new(listing:berlin, guest:lisa)
+
+
+##################BAKERY###########################
+
 
 bakery1 = Bakery.new(name:"Joy's baked goodz")
 bakery2 = Bakery.new(name:"Lisa's baked goodz")
@@ -73,6 +79,10 @@ cream = Ingredient.new(dessert: banana_pie, name:"cream", calorie_count:60)
 banana = Ingredient.new(dessert:banana_pie, name:"banana", calorie_count:55)
 chocolate_sprinkles = Ingredient.new(dessert: doughnut, name:"chocolate_sprinkles", calorie_count:50)
 
+
+####################LYFT###############################
+
+
 joy = Passenger.new(name:"Joy")
 vicki = Passenger.new(name: "Vicki")
 lisa = Passenger.new(name:"Lisa")
@@ -92,7 +102,47 @@ ride8= Ride.new(passenger:lisa, driver:bob, distance:100.2)
 ride9= Ride.new(passenger:lisa, driver:tiffany, distance:99.9)
 
 
+###################################IMDB########################################
 
+
+##Create show with same title of movie
+sponge_actor = Actor.new(name:"Sponge Actor")
+patrick_actor = Actor.new(name: "Patrick Actor")
+sponge_bob_movie = Movie.new(title:"Spongebob Squarepants")
+sponge_bob_show = Show.new(title:"Spongebob Squarepants")
+sponge_ep1 = Episode.new(show:sponge_bob_show, name:"Episode 1- spongebob", season:1)
+sponge_ep2 = Episode.new(show:sponge_bob_show, name:"Episode 2- spongebob", season:1)
+sponge_ep3 = Episode.new(show:sponge_bob_show, name:"Episode 3- spongebob", season:2)
+sponge_ep4 = Episode.new(show:sponge_bob_show, name:"Episode 4- spongebob", season:2)
+spongebob_squarepants = Character.new(actor:sponge_actor, name:"Spongebob", movies:[sponge_bob_movie], episodes:[sponge_ep1 , sponge_ep2, sponge_ep3, sponge_ep4])
+patrick_star = Character.new(actor:patrick_actor, name:"Patrick Star", movies:[sponge_bob_movie], episodes:[sponge_ep1 , sponge_ep3, sponge_ep4])
+##create a movie with lots of actors to test method
+star_wars1 = Movie.new(title: "Star Wars - 1")
+star_wars2 = Movie.new(title: "Star Wars - 2")
+star_wars3 = Movie.new(title: "Star Wars - 3")
+star_wars4 = Movie.new(title: "Star Wars - 4")
+
+kiera_knightly = Actor.new(name:"Kiera Knightly")
+olivia_wilde = Actor.new(name:"Olivia Wilde")
+joy_huang = Actor.new(name:"Joy Huang")
+tom_cruise = Actor.new(name:"Tom Cruise")
+brad_pitt = Actor.new(name:"Brad Pitt")
+meryl_streep = Actor.new(name:"Meryl Streep")
+obama = Actor.new(name:"Obama")
+anne_hathaway = Actor.new(name: "Anne Hathaway")
+
+Character.new(actor:patrick_actor, name:"Yoda", movies:[star_wars1, star_wars2, star_wars3, star_wars4])
+Character.new(actor:kiera_knightly, name:"starwarsactor1", movies:[star_wars1, star_wars2, star_wars3, star_wars4])
+Character.new(actor: olivia_wilde, name:"starwarsactor2", movies:[star_wars1, star_wars2, star_wars3])
+Character.new(actor: joy_huang, name:"starwarsactor3", movies:[star_wars1, star_wars2, star_wars3])
+Character.new(actor: tom_cruise, name:"starwarsactor4", movies:[star_wars1, star_wars2])
+Character.new(actor: brad_pitt, name:"starwarsactor5", movies:[star_wars1, star_wars2])
+Character.new(actor: meryl_streep, name:"starwarsactor6", movies:[star_wars1])
+Character.new(actor:obama, name:"starwarsactor7", movies:[star_wars1])
+Character.new(actor:anne_hathaway, name:"starwarsactor8", movies:[star_wars1])
+#create an actor that has lots of characters
+
+#create character that appears many times in films/shows
 
 
 Pry.start
